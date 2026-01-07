@@ -4,10 +4,10 @@
 void initStack(Stack *s){
     s->top =-1;
 }
-void isEmpty(Stack *s){
+int  isEmpty(Stack *s){
     return s->top ==-1;
 }
-void isFull(Stack *s){
+int isFull(Stack *s){
     return s->top == MAX-1;
 }
 void push(Stack *s, int value){
