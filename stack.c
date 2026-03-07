@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include "stack.h"
-#
+
 
 void initStack(Stack *s){
     s->top =-1;

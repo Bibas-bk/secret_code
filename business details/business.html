@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChicThread | Modern Apparel</title>
+    <link rel="stylesheet" href="business.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">ChicThread</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Redefine Your Style</h1>
+            <p>Discover the latest trends in men's and women's fashion.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products" class="container">
+        <h2>Featured Collection</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x400/png?text=Classic+White+Tee" alt="T-Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Classic White Tee</h3>
+                    <p class="price">$25.00</p>
+                    <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x400/png?text=Denim+Jacket" alt="Jacket">
+                </div>
+                <div class="product-info">
+                    <h3>Vintage Denim Jacket</h3>
+                    <p class="price">$85.00</p>
+                    <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x400/png?text=Slim+Fit+Jeans" alt="Jeans">
+                </div>
+                <div class="product-info">
+                    <h3>Slim Fit Jeans</h3>
+                    <p class="price">$60.00</p>
+                    <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x400/png?text=Summer+Dress" alt="Dress">
+                </div>
+                <div class="product-info">
+                    <h3>Summer Floral Dress</h3>
+                    <p class="price">$45.00</p>
+                    <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>ChicThread</h3>
+            <p>Your favorite online clothing store.</p>
+            <ul class="socials">
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ChicThread. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="business.js"></script>
+</body>
+</html>
