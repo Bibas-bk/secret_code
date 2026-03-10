@@ -1,0 +1,71 @@
+# User Settings Management
+
+def add_setting(settings, key_value):
+    key, value = key_value
+    key = key.lower()
+    value = value.lower()
+    
+    if key in settings:
+        return f"Setting '{key}' already exists! Cannot add a new setting with this name."
+    
+    settings[key] = value
+    return f"Setting '{key}' added with value '{value}' successfully!"
+
+def update_setting(settings, key_value):
+    key, value = key_value
+    key = key.lower()
+    value = value.lower()
+    
+    if key in settings:
+        settings[key] = value
+        return f"Setting '{key}' updated to '{value}' successfully!"
+    
+    return f"Setting '{key}' does not exist! Cannot update a non-existing setting."
+
+def delete_setting(settings, key):
+    key = key.lower()
+    
+    if key in settings:
+        settings.pop(key)
+        return f"Setting '{key}' deleted successfully!"
+    
+    return "Setting not found!"
+
+def view_settings(settings):
+    if not settings:
+        return "No settings available."
+    
+    results = "Current User Settings:\n"
+    for key, value in settings.items():
+        results += f"{key.capitalize()}: {value}\n"
+    results +="\n"
+    
+    return results.rstrip("")  # Remove the last newline
+
+# -------------------------
+# Example Test
+# -------------------------
+test_settings = {}
+
+# Add settings
+print(add_setting(test_settings, ('Theme', 'Dark')))
+print(add_setting(test_settings, ('Notifications', 'Enabled')))
+print(add_setting(test_settings, ('Volume', 'High')))
+
+# Try adding an existing setting
+print(add_setting(test_settings, ('Theme', 'Light')))
+
+# Update a setting
+print(update_setting(test_settings, ('Theme', 'Light')))
+
+# Try updating a non-existing setting
+print(update_setting(test_settings, ('Brightness', '50')))
+
+# Delete a setting
+print(delete_setting(test_settings, 'Notifications'))
+
+# Try deleting a non-existing setting
+print(delete_setting(test_settings, 'Contrast'))
+
+# View all settings
+print(view_settings(test_settings))       
