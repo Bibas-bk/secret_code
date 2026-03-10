@@ -18,9 +18,6 @@ class HashTable:
             del self.collection[hash_value][key]#renove the key value pair from dictionary at the hash value
             if not self.collection[hash_value]:#use the not operator to check if the dictionary at the hash value is empty after removing the key-value
                del self.collection[hash_value]#remove hash value from the collection
-
-       # if not self.collection[hash_value]:
-           # del self.collection[hash_value]
     def lookup(self,key):
         hash_value=self.hash(key)
         if hash_value in self.collection and key in self.collection[hash_value]:
